@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Decrement</title>
+    <style>
+        .box{
+            width: 350px;
+            height: 300px;
+            background-color: rgb(141, 233, 233);
+            border: 2px solid rgb(7, 89, 144);
+            border-radius: 20px;
+            
+        }
+        .shoes{
+           text-align: center;
+        }
+       .symbol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+       }
+       .sign{
+        padding: 0px 20px;
+
+       }
+    </style>
+</head>
+<body>
+    <h1>Increment Decrement</h1>
+
+    <div class="box">
+        <img src="./3414-removebg-preview.png" width="300px " class="shoes">
+        
+        <div class="symbol">
+        <button onclick= 'dec()'>
+           -
+        </button>
+        
+        <span id="quantity"><h1>1</h1></span>
+        <button onclick="inc()">+
+        </button>
+        </div>
+    </div>
+
+    <script>
+       
+       let numberQuantity = document.getElementById('quantity');
+
+        function inc(){
+        let number = parseInt(numberQuantity.innerText);
+        numberQuantity.innerText = ++number;
+       
+    
+
+       }
+
+       function dec(){
+        let number = parseInt(numberQuantity.innerText);
+        numberQuantity.innerText = --number;
+
+        if( numberQuantity > 0){
+            numberQuantity.innerText= number--;
+        }
+
+       }
+
+       
+       </script>
+    
+</body>
+</html>

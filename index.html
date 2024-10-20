@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+    <style>
+        .box{
+            height: 170px;
+            width: 200px;
+            border: 2px double black;
+            margin-bottom: 30px;
+        }
+        .btn{
+            padding: 5px 12px;
+            border-radius: 5px;
+            margin-top: 130px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .bg-red{
+            background-color: red;
+        }
+        .bg-green{
+            background-color: green;
+        }
+
+        .bg-charcoal{
+            background-color: #333333;
+
+        }
+        .bg-mustard{
+            background-color: #ffdb58;
+
+
+        }
+        
+        .bg-navy{
+        background-color: #001f3f ;
+        }
+
+        .bg-blush{
+         background-color: #dfb0a7;
+
+        }
+        .bg-cyan{
+            background-color:#00FFFF;
+        }
+        .bg-magenta{
+            background-color:#FF00FF ;
+        }
+
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box bg-green" id="cantainer">
+
+    <button class="btn" type="button" onclick="makered()">Red</button>
+   
+    <button class="btn" type="button" onclick="makegreen()">Green</button>
+
+    </div>
+      
+    
+    <!--   #333333 (Charcoal) and #ffdb58 (Mustard) -->
+
+    <div class="box bg-mustard" id="cantainer2">
+
+    <button class="btn" type="button" onclick="makeCharcoal()">charcoal</button>
+   
+    <button class="btn" type="button" onclick="makeMustard()">Mustard</button>
+
+    </div>
+
+    <!--#001f3f (Navy) and #f8d2cb (Blush)-->
+    <div class="box bg-blush" id="cantainer3">
+       
+    <button class="btn " type="button" onclick="makeNavy()">navy</button>
+   
+    <button class="btn" type="button" onclick="makeBlush()">blush</button>   
+
+    </div>
+
+
+    <!--Cyan - #00FFFF
+    Magenta - #FF00FF-->
+
+    <div class="box bg-cyan" id="cantainer4">
+    
+    <button class="btn" type="button" onclick="makeCyan()">Cyan</button>
+   
+    <button class="btn" type="button" onclick="makeMagenta()">Magenta</button>
+    
+    </div>
+
+    
+    <script>
+         
+         let cardElement = document.getElementById('cantainer');
+        function makered(){
+            cardElement.classList.remove('bg-green');
+            cardElement.classList.add('bg-red');
+       
+        }
+
+        function makegreen(){
+            cardElement.classList.remove('bg-red');
+            cardElement.classList.add('bg-green');
+        }
+
+        // secound box
+        let cardElement2 = document.getElementById('cantainer2');
+
+        function makeCharcoal(){
+            cardElement2.classList.remove('bg-mustard');
+            cardElement2.classList.add('bg-charcoal');
+        }
+
+        function makeMustard(){
+            cardElement2.classList.remove('bg-charcoal');
+            cardElement2.classList.add('bg-mustard');
+        }
+        // third box
+        let cardElement3 = document.getElementById('cantainer3');
+
+        function makeNavy(){
+         cardElement3.classList.remove('bg-blush');
+         cardElement3.classList.add('bg-navy');
+        }
+
+        function makeBlush(){
+        cardElement3.classList.remove('bg-navy');
+         cardElement3.classList.add('bg-blush');
+
+        }
+        // fourth box
+
+        let cardElement4 = document.getElementById('cantainer4');
+
+        function makeCyan(){
+         cardElement4.classList.remove('bg-magenta');
+         cardElement4.classList.add('bg-cyan');
+        }
+
+        function makeMagenta(){
+        cardElement4.classList.remove('bg-cyan');
+         cardElement4.classList.add('bg-magenta');
+
+        }
+    </script>
+    
+</body>
+</html>
